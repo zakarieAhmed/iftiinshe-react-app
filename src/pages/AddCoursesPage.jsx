@@ -190,7 +190,7 @@ const AddCoursesPage = () => {
                   className="border rounded w-full py-2 px-3 mb-2"
                   type="text"
                   id="name"
-                  placeholder="eg. Prof: Zakaria Ahmed Nur,"
+                  placeholder="Prof: Zakaria Ahmed Nur"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
