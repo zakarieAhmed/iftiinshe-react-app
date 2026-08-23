@@ -190,7 +190,7 @@ const AddCoursesPage = () => {
                   className="border rounded w-full py-2 px-3 mb-2"
                   type="text"
                   id="name"
-                  placeholder="eg. Abdillahi,"
+                  placeholder="eg. Prof: Zakaria Ahmed Nur,"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -224,7 +224,7 @@ const AddCoursesPage = () => {
                   className="border rounded w-full py-2 px-3 mb-2"
                   type="email"
                   id="email"
-                  placeholder="eg. example@gmail.com"
+                  placeholder="qadizaki2000@gmail.com"
                   required
                   value={contactEmail}
                   onChange={(e) => setContactEmail(e.target.value)}
