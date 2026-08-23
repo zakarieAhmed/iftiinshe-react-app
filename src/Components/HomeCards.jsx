@@ -19,8 +19,9 @@ const HomeCards = () => {
               </p>
 
               <Link
-                to="/courses "
-                className="bg-black text-white w-38 text-center rounded-lg px-4 py-2 hover:bg-gray-700 inline-block">
+                to="/courses"
+                className="bg-black text-white w-38 text-center rounded-lg px-4 py-2 hover:bg-gray-700 inline-block"
+              >
                 Browse Courses
               </Link>
             </Card>

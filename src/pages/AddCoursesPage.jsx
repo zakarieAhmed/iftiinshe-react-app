@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const AddCoursesPage = () => {
+const AddCourse = () => {
   const [title, setTitle] = useState("");
   const [type, setType] = useState("");
   const [description, setDescription] = useState("");
   const [duration, setDuration] = useState("");
   const [technology, setTechnology] = useState("");
   const [price, setPrice] = useState("");
-  const [name, setName] = useState("");
-  const [bio, setBio] = useState("");
+  const [instructorName, setInstructorName] = useState("");
+  const [instructorDescription, setInstructorDescription] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactPhone, setContactPhone] = useState("");
+
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const newCourse = {
       title,
       type,
@@ -22,245 +25,229 @@ const AddCoursesPage = () => {
       duration,
       technology,
       price,
+
       instructor: {
-        name,
-        description: bio,
+        name: instructorName,
+        description: instructorDescription,
         contactEmail,
-        contactPhone
-      }
+        contactPhone,
+      },
     };
+
     try {
       const res = await fetch("http://localhost:3000/courses", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(newCourse)
+        body: JSON.stringify(newCourse),
       });
+
       if (!res.ok) {
-        throw new Error("Failed to add course");
+        throw new Error("Course lama darin");
       }
-      const data = await res.json();
-      console.log("Course Added:", data);
+
+      alert("Course successfully added");
       navigate("/courses");
     } catch (error) {
-
-      console.log(error);
-
+      console.error(error);
+      alert("Error adding course");
     }
   };
+
   return (
-    <div>
-      <section className="bg-indigo-100">
-        <div className="container m-auto max-w-2xl py-24">
-          <div className="bg-white px-6 py-8 shadow-md rounded-md border mt-4 md:m-0">
-            <form onSubmit={handleSubmit}>
-              <h2 className="text-3xl text-center font-semibold mb-6">
-                Add Course
-              </h2>
-              <div className="mb-4">
-                <label
-                  className="text-gray-700 mb-6 block font-bold"
-                  htmlFor="type"
-                >
-                  Course Type
-                </label>
-                <select
-                  className="border rounded w-full py-2 px-3"
-                  name="type"
-                  id="type"
-                  required
-                  value={type}
-                  onChange={(e) => setType(e.target.value)}
-                >
-                  <option value="full-stack">
-                    Full Stack
-                  </option>
-                  <option value="front-end">
-                    Front End
-                  </option>
-                  <option value="back-end">
-                    Back End
-                  </option>
-                  <option value="database">
-                    Database
-                  </option>
-                  <option value="programming language">
-                    programming language
-                  </option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="title"
-                >
-                  Course Title
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="text"
-                  id="title"
-                  placeholder="eg. React Course"
-                  required
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="description"
-                >
-                  Description
-                </label>
-                <textarea
-                  className="border rounded w-full py-2 px-3"
-                  rows="4"
-                  placeholder="Add your course description, ...."
-                  id="description"
-                  required
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                >
-                </textarea>
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="duration"
-                >
-                  Duration
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="text"
-                  id="duration"
-                  placeholder="eg. 1 month."
-                  required
-                  value={duration}
-                  onChange={(e) => setDuration(e.target.value)}
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="technlogies"
-                >
-                  Technlogies
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="text"
-                  id="technlogies"
-                  placeholder="eg. html, css ...."
-                  required
-                  value={technology}
-                  onChange={(e) => setTechnology(e.target.value)}
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="price"
-                >
-                  Price
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="number"
-                  id="price"
-                  placeholder="eg. $ 10"
-                  required
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
-                />
-              </div>
-              <h3 className="text-2xl mb-5">
-                Instructor Info
-              </h3>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="name"
-                >
-                  Instructor Name
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="text"
-                  id="name"
-                  placeholder="Prof: Zakaria Ahmed Nur"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="bio"
-                >
-                  Instructor Bio
-                </label>
-                <textarea
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  name="Bio"
-                  id="bio"
-                  required
-                  value={bio}
-                  onChange={(e) => setBio(e.target.value)}
-                >
-                </textarea>
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="email"
-                >
-                  Contact Email
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="email"
-                  id="email"
-                  placeholder="qadizaki2000@gmail.com"
-                  required
-                  value={contactEmail}
-                  onChange={(e) => setContactEmail(e.target.value)}
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="block text-gray-700 font-bold mb-2"
-                  htmlFor="phone"
-                >
-                  Contact Phone
-                </label>
-                <input
-                  className="border rounded w-full py-2 px-3 mb-2"
-                  type="tel"
-                  id="phone"
-                  placeholder="eg. +252 617 338972"
-                  required
-                  value={contactPhone}
-                  onChange={(e) => setContactPhone(e.target.value)}
-                />
-              </div>
-              <div>
-                <button
-                  className="bg-indigo-500 py-2 px-4 text-white hover:bg-indigo-600 rounded-full w-full focus:outline-none focus:shadow-outline"
-                  type="submit"
-                >
-                  Add Course
-                </button>
-              </div>
-            </form>
-          </div>
+    <div className="bg-indigo-50 min-h-screen py-10">
+      <div className="container m-auto max-w-2xl px-6">
+        <div className="bg-white rounded-lg shadow-md p-6">
+
+          <h1 className="text-3xl font-bold text-center text-indigo-500 mb-6">
+            Add Course
+          </h1>
+
+          <form onSubmit={handleSubmit}>
+
+            {/* Course Type */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Course Type
+              </label>
+
+              <select
+                value={type}
+                onChange={(e) => setType(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                required
+              >
+                <option value="">Select Course Type</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="Front End">Front End</option>
+                <option value="Back End">Back End</option>
+                <option value="Database">Database</option>
+                <option value="Programming Language">
+                  Programming Language
+                </option>
+              </select>
+            </div>
+
+            {/* Course Title */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Course Title
+              </label>
+
+              <input
+                type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Enter course title"
+                required
+              />
+            </div>
+
+            {/* Description */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Description
+              </label>
+
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Enter course description"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            {/* Duration */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Duration
+              </label>
+
+              <input
+                type="text"
+                value={duration}
+                onChange={(e) => setDuration(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="e.g. 3 months"
+                required
+              />
+            </div>
+
+            {/* Technologies */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Technologies
+              </label>
+
+              <input
+                type="text"
+                value={technology}
+                onChange={(e) => setTechnology(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="e.g. React, JavaScript"
+                required
+              />
+            </div>
+
+            {/* Price */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Price
+              </label>
+
+              <input
+                type="number"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Enter course price"
+                required
+              />
+            </div>
+
+            {/* Instructor Name */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Instructor Name
+              </label>
+
+              <input
+                type="text"
+                value={instructorName}
+                onChange={(e) => setInstructorName(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Prof: Zakaria Ahmed Nur"
+                required
+              />
+            </div>
+
+            {/* Instructor Description */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Instructor Description
+              </label>
+
+              <textarea
+                value={instructorDescription}
+                onChange={(e) =>
+                  setInstructorDescription(e.target.value)
+                }
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Enter instructor description"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            {/* Contact Email */}
+            <div className="mb-4">
+              <label className="block font-semibold mb-2">
+                Contact Email
+              </label>
+
+              <input
+                type="email"
+                value={contactEmail}
+                onChange={(e) => setContactEmail(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Enter contact email"
+                required
+              />
+            </div>
+
+            {/* Contact Phone */}
+            <div className="mb-6">
+              <label className="block font-semibold mb-2">
+                Contact Phone
+              </label>
+
+              <input
+                type="tel"
+                value={contactPhone}
+                onChange={(e) => setContactPhone(e.target.value)}
+                className="border rounded-lg w-full px-4 py-2"
+                placeholder="Enter contact phone"
+                required
+              />
+            </div>
+
+            {/* Add Course */}
+            <button
+              type="submit"
+              className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold rounded-lg px-5 py-3 w-full"
+            >
+              Add Course
+            </button>
+
+          </form>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
 
-export default AddCoursesPage;
+export default AddCourse;

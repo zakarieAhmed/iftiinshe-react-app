@@ -16,21 +16,6 @@
       }
     },
     {
-      "title": "SQL Mastery",
-      "type": "Database",
-      "description": "Ready to dive into SQL and databases? In our practical and beginner-friendly course, you will learn how to efficiently manage, organize, and manipulate data using SQL. The course covers database fundamentals, tables, relationships, primary keys, foreign keys, SELECT queries, filtering, sorting, grouping, joins, subqueries, and data modification. You will also gain practical experience working with MySQL and PostgreSQL and learn how databases are used in real-world applications. ",
-      "duration": "1 Month",
-      "technology": "SQL, MySQL, Postgres..",
-      "price": "20",
-      "instructor": {
-        "name": "Dr: Mohamed Ahmed Nur",
-        "description": "A skilled database engineer with years of experience in managing complex database systems and developing reliable data solutions. He has extensive knowledge of SQL, MySQL, PostgreSQL, database design, data modeling, query optimization, and database management. He has worked with different types of database systems.",
-        "contactEmail": "MohamedAhmed114@gmail.com",
-        "contactPhone": "0616687985"
-      },
-      "id": "2"
-    },
-    {
       "title": "Node & Express",
       "type": "Back-End",
       "description": "Looking to master Node.js and Express? Our comprehensive course will teach you how to build fast, scalable, and powerful server-side applications. You will learn how Node.js works, how to create Express servers, build REST APIs, handle HTTP requests and responses, manage routes, work with middleware, validate data, and connect applications to databases. The course also introduces modern backend development concepts and practical techniques for building real-world web applications. By completing this course, you will have the skills needed to create reliable backend systems and connect them with frontend applications.",
@@ -61,19 +46,19 @@
       }
     },
     {
-      "id": "5",
       "title": "React JS",
       "type": "Front-End",
-      "description": "Interested in React? Our comprehensive and hands-on course will teach you how to build dynamic, interactive, and modern web applications using React.js. You will learn components, props, state management, events, forms, React Hooks such as useState and useEffect, API integration, routing, reusable components, and modern frontend development practices. Throughout the course, you will work on practical projects that help you understand how professional React applications are structured and developed. By the end of the course, you will be able to create responsive single-page applications and confidently continue building more advanced React projects.",
-      "technology": "React.js",
+      "description": "Interested in React? Our comprehensive and hands-on course will teach you how to build dynamic, interactive, and modern web applications using React.js. You will learn components, props, state management, events, forms, React Hooks such as useState and useEffect, API integration, routing, reusable components, and modern frontend development practices. Throughout the course, you will work on practical projects that help you understand how professional React applications are structured and developed. ",
       "duration": "1 Month",
-      "price": "29.99",
+      "technology": "React.js",
+      "price": "25.50",
       "instructor": {
         "name": "Drs: Maryan Ahmed Nur",
         "description": "A React specialist with extensive experience in developing dynamic and interactive single-page applications. She has strong knowledge of React components, Hooks, state management, API integration, routing, reusable UI components, and modern frontend development.",
         "contactEmail": "mariaahmed1990@gmail.com",
         "contactPhone": "618811100"
-      }
+      },
+      "id": "5"
     },
     {
       "id": "6",
@@ -89,6 +74,21 @@
         "contactEmail": "hiboahmed2000@.com",
         "contactPhone": "618441400"
       }
+    },
+    {
+      "title": "python Programming Language",
+      "type": "Programming Language",
+      "description": "Learn Python programming from the basics and build a strong foundation in coding.\nYou will learn variables, data types, conditions, loops, functions, and object-oriented programming.\nThe course includes practical exercises and real-world projects to improve your programming skills",
+      "duration": "3 months",
+      "technology": "Python Object Oriented Programming language",
+      "price": "48",
+      "instructor": {
+        "name": "Dr: Mohamed Ahmed Nur",
+        "description": "Python Programming instructor with strong knowledge of Python fundamentals and application development.\nTeaches variables, functions, loops, data structures, and object-oriented programming.\nProvides practical projects and exercises to help students build real-world Python skills.",
+        "contactEmail": "mohamedahmed1980@gmail.com",
+        "contactPhone": "615843890"
+      },
+      "id": "AgYhofg"
     }
   ]
 }

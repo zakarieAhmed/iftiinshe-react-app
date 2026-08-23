@@ -100,7 +100,6 @@ const CourseDetails = () => {
       {/* Course Information */}
       <section className="bg-indigo-50">
         <div className="container m-auto py-10 px-6 grid grid-cols-1 md:grid-cols-[7fr_4fr] gap-6">
-
           {/* Main Course Details */}
           <main>
             <div className="bg-white p-6 rounded-lg shadow-md text-center md:text-left">
