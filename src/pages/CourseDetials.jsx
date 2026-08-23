@@ -183,7 +183,7 @@ const CourseDetails = () => {
               <h3 className="text-xl mb-6 font-semibold">
                 Manage Course
               </h3>
-
+{/*  hada */}
               <Link
                 to={`/edit-course/${id}`}
                 className="bg-indigo-500 rounded-full text-white text-center font-bold py-2 px-4 hover:bg-indigo-600 block w-full"
