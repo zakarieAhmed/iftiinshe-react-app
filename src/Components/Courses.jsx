@@ -12,11 +12,7 @@ const Courses = ({ isHome = false }) => {
         setLoading(true);
         setError("");
 
-        const apiURL = isHome
-          ? "http://localhost:3000/courses?_limit=3"
-          : "http://localhost:3000/courses";
-
-        const res = await fetch(apiURL);
+        const res = await fetch("http://localhost:3000/courses");
 
         if (!res.ok) {
           throw new Error("Courses lama soo qaadi karin");
@@ -24,7 +20,7 @@ const Courses = ({ isHome = false }) => {
 
         const data = await res.json();
 
-        setCourses(data);
+        setCourses(isHome ? data.slice(0, 3) : data);
       } catch (error) {
         console.error(error);
         setError("Courses lama soo qaadi karin.");
@@ -55,20 +51,15 @@ const Courses = ({ isHome = false }) => {
   return (
     <section className="bg-blue-50 px-4 py-10">
       <div className="container-xl lg:container m-auto">
-
         <h1 className="text-3xl font-bold text-center text-indigo-500 mb-6">
           {isHome ? "Recent Courses" : "All Courses"}
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {courses.map((course) => (
-            <CourseCard
-              key={course.id}
-              course={course}
-            />
+            <CourseCard key={course.id} course={course} />
           ))}
         </div>
-
       </div>
     </section>
   );
