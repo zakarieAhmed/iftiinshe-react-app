@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 const CourseCard = ({ course }) => {
   return (
     <div className="bg-white rounded-xl shadow-md relative">
-
       <div className="p-4">
-
         <div className="mb-6">
           <span className="text-gray-600">
             {course.type}
@@ -34,7 +32,6 @@ const CourseCard = ({ course }) => {
         <div className="border border-gray-100 mb-5"></div>
 
         <div className="flex justify-between items-center gap-3">
-
           <span className="text-orange-700 flex gap-2 items-center">
             <FaCode />
             {course.technology}
@@ -42,15 +39,12 @@ const CourseCard = ({ course }) => {
 
           <Link
             to={`/courses/${course.id}`}
-            className="text-center bg-indigo-500 hover:bg-indigo-600 rounded-lg px-4 py-2 text-white"
+            className="w-32 shrink-0 text-center bg-indigo-500 hover:bg-indigo-600 rounded-lg px-4 py-3 text-white"
           >
             Read More
           </Link>
-
         </div>
-
       </div>
-
     </div>
   );
 };
