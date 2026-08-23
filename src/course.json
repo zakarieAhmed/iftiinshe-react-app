@@ -1,0 +1,94 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "HTML & CSS",
+      "type": "Front-End",
+      "description": "Want to master HTML and CSS? Our hands-on course will guide you through the complete process of creating stunning, responsive, and professional websites. You will learn how to structure web pages using HTML, style modern interfaces with CSS, create responsive layouts for different screen sizes, work with forms, navigation bars, cards, buttons, and build attractive websites from scratch. This course is designed for beginners who want to develop a strong foundation in frontend web development and gain practical skills through real-world projects.",
+      "technology": "HTML, CSS",
+      "duration": "2 Months",
+      "price": "19.99",
+      "instructor": {
+        "name": "Prof: Zakaria Ahmed Nur",
+        "description": "An experienced web developer with strong expertise in crafting responsive and user-friendly websites. He has practical knowledge of HTML, CSS, responsive design, website layouts, and modern frontend development techniques. With a passion for teaching, he helps students understand web development.",
+        "contactEmail": "zakra0001@gmail.com",
+        "contactPhone": "+252617338972"
+      }
+    },
+    {
+      "title": "SQL Mastery",
+      "type": "Database",
+      "description": "Ready to dive into SQL and databases? In our practical and beginner-friendly course, you will learn how to efficiently manage, organize, and manipulate data using SQL. The course covers database fundamentals, tables, relationships, primary keys, foreign keys, SELECT queries, filtering, sorting, grouping, joins, subqueries, and data modification. You will also gain practical experience working with MySQL and PostgreSQL and learn how databases are used in real-world applications. ",
+      "duration": "1 Month",
+      "technology": "SQL, MySQL, Postgres..",
+      "price": "20",
+      "instructor": {
+        "name": "Dr: Mohamed Ahmed Nur",
+        "description": "A skilled database engineer with years of experience in managing complex database systems and developing reliable data solutions. He has extensive knowledge of SQL, MySQL, PostgreSQL, database design, data modeling, query optimization, and database management. He has worked with different types of database systems.",
+        "contactEmail": "MohamedAhmed114@gmail.com",
+        "contactPhone": "0616687985"
+      },
+      "id": "2"
+    },
+    {
+      "title": "Node & Express",
+      "type": "Back-End",
+      "description": "Looking to master Node.js and Express? Our comprehensive course will teach you how to build fast, scalable, and powerful server-side applications. You will learn how Node.js works, how to create Express servers, build REST APIs, handle HTTP requests and responses, manage routes, work with middleware, validate data, and connect applications to databases. The course also introduces modern backend development concepts and practical techniques for building real-world web applications. By completing this course, you will have the skills needed to create reliable backend systems and connect them with frontend applications.",
+      "duration": "3 Months",
+      "technology": "Node, Express, Prisma..",
+      "price": "30",
+      "instructor": {
+        "name": "Eng Yonis Ahmed Nur",
+        "description": "A professional backend developer with a deep understanding of Node.js, Express, APIs, and server-side application development. He has practical experience building backend systems, REST APIs, database integrations, authentication systems, and scalable web applications, He enjoys teaching backend development.",
+        "contactEmail": "yoonisyare1990@gmail.com",
+        "contactPhone": "0615748749"
+      },
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "title": "Dart & Flutter",
+      "type": "Mobile App",
+      "description": "Excited to learn Dart and Flutter? This course will guide you through the complete process of creating beautiful, modern, and high-performance mobile applications. You will learn the fundamentals of Dart programming, Flutter widgets, layouts, navigation, forms, user interfaces, state management, and connecting applications to external services. You will also work on practical projects that demonstrate how professional mobile applications are designed and developed. This course is suitable for beginners who want to start mobile development and learn how to build applications that can run across multiple platforms.",
+      "technology": "Dart, Flutter",
+      "duration": "2 Months",
+      "price": "30",
+      "instructor": {
+        "name": "Prof: ilyas Ahmed Nur",
+        "description": "An accomplished mobile developer with strong experience in creating cross-platform applications using Dart and Flutter. He has practical knowledge of mobile application development, UI design, Flutter widgets, navigation, application architecture, and responsive mobile interfaces.",
+        "contactEmail": "ilyasAhmed129@gmail.com",
+        "contactPhone": "615422522"
+      }
+    },
+    {
+      "id": "5",
+      "title": "React JS",
+      "type": "Front-End",
+      "description": "Interested in React? Our comprehensive and hands-on course will teach you how to build dynamic, interactive, and modern web applications using React.js. You will learn components, props, state management, events, forms, React Hooks such as useState and useEffect, API integration, routing, reusable components, and modern frontend development practices. Throughout the course, you will work on practical projects that help you understand how professional React applications are structured and developed. By the end of the course, you will be able to create responsive single-page applications and confidently continue building more advanced React projects.",
+      "technology": "React.js",
+      "duration": "1 Month",
+      "price": "29.99",
+      "instructor": {
+        "name": "Drs: Maryan Ahmed Nur",
+        "description": "A React specialist with extensive experience in developing dynamic and interactive single-page applications. She has strong knowledge of React components, Hooks, state management, API integration, routing, reusable UI components, and modern frontend development.",
+        "contactEmail": "mariaahmed1990@gmail.com",
+        "contactPhone": "618811100"
+      }
+    },
+    {
+      "id": "6",
+      "title": "MongoDB",
+      "type": "Database",
+      "description": "Keen to explore MongoDB? Our hands-on course will introduce you to the world of NoSQL databases and modern data management. You will learn how MongoDB stores data using documents and collections, how to create and manage databases, insert and retrieve documents, update and delete data, perform queries, and work with MongoDB through Mongoose. The course also introduces database modeling, relationships, validation, and connecting MongoDB to backend applications. By the end of the course, you will have practical knowledge of MongoDB and understand how NoSQL databases are used in modern web applications.",
+      "technology": "MongoDb, Mongoose..",
+      "duration": "1 Month",
+      "price": "19.99",
+      "instructor": {
+        "name": "Drs: Hibo Ahmed Nur",
+        "description": "A NoSQL database expert with a deep understanding of MongoDB, Mongoose, database modeling, and modern data management systems. She has practical experience designing flexible database structures and connecting MongoDB with backend applications. She understands how to manage documents, collections, queries, validation, and data relationships efficiently.",
+        "contactEmail": "hiboahmed2000@.com",
+        "contactPhone": "618441400"
+      }
+    }
+  ]
+}
